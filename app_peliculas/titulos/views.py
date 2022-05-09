@@ -14,7 +14,7 @@ def index(request):
     return render(request, "titulos/index.html")
 
 
-def nueva_pelicula(request):
+def nueva_pelicula(request, template_name="titulos/nueva_pelicula.html"):
     if request.method == "POST":
         form = forms.FormularioPeliculas(request.POST)
         if form.is_valid():
@@ -31,7 +31,7 @@ def nueva_pelicula(request):
     else:
         form = forms.FormularioPeliculas()
     ctx = {"form": form}
-    return render(request, "titulos/nueva_pelicula.html", ctx)
+    return render(request, template_name, ctx)
 
 
 def peliculas(request, template_name="titulos/peliculas.html"):

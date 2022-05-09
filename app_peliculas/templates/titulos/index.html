@@ -13,11 +13,9 @@
 <body>        
     <div class="botones">
         <h1>Aplicación de Peliculas</h1></br>
-        <button>Listado de Peliculas</button></br>
-        <button>Cargar Pelicula</button> 
-    </div>
-    
-
+        <a href="{% url 'peliculas' %}"><button> Listado de Peliculas</button></a> </br>
+        <a href="{% url 'nueva_pelicula' %}"><button>Cargar Pelicula</button></a> 
+    </div>    
 </body>
 
 </html>

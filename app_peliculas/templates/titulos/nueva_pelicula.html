@@ -17,8 +17,10 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Añadir Pelicula">
-    </form>
+    </form></br></br>
+    <a href="{% url 'index' %}"><button>Volver a Inicio</button></a> 
     </div>   
+    
 
 </body>
 

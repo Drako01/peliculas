@@ -5,3 +5,10 @@
     padding: 2%;
 }
 
+.botones a{
+    text-decoration: none;
+}
+
+.tabla h1{
+    color: rgb(175, 9, 9);
+}

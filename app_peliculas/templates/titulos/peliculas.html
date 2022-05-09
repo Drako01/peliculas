@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <div class="tabla">
+    <div style="display: flex;
+    flex-direction: column;
+    align-items: center;">
         <h1>Listado de Peliculas</h1>
         <table style="border: 1px solid">
             <thead>
@@ -37,28 +39,28 @@
         </table>
 
         <h3>Referencias:</h3>
-        <h4>Genero:</h4> 
+        <h4>Genero:</h4>
         <ul>
             <li>1 = Accion</li>
             <li>2 = Drama</li>
             <li>3 = Romantica</li>
             <li>4 = Infantil</li>
         </ul>
-        <h4>Audiencia:</h4> 
+        <h4>Audiencia:</h4>
         <ul>
             <li>1 = ATP - Apto para Todo Público</li>
             <li>2 = Peliculas Infantiles</li>
-            <li>3 = +18 - Contenido para Adultos</li>            
+            <li>3 = +18 - Contenido para Adultos</li>
         </ul>
         <h4>Preventa:</h4>
         <ul>
             <li>0 = No</li>
             <li>1 = Si</li>
         </ul>
-    </br></br>
-    <a href="{% url 'index' %}"><button>Volver a Inicio</button></a> 
+        </br></br>
+        <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
     </div>
-    
+
 </body>
 
 </html>

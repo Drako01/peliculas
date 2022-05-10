@@ -27,7 +27,7 @@ def nueva_pelicula(request, template_name="titulos/nueva_pelicula.html"):
             )
             conn.commit()
             conn.close()
-            return HttpResponse("Pelicula añadida Correctamemte.!!")            
+            return HttpResponseRedirect(reverse("carga_pelicula"))            
     else:
         form = forms.FormularioPeliculas()
     ctx = {"form": form}
@@ -42,3 +42,6 @@ def peliculas(request, template_name="titulos/peliculas.html"):
     conn.close()
     dato = {"peliculas": pelicula_list}
     return render(request, template_name, dato)
+
+def carga_pelicula(request, template_name="titulos/carga_pelicula.html"):
+    return render(request, template_name)

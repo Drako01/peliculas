@@ -17,12 +17,10 @@
 
 <body>
     <div class="carga_p">
-        <h1>Agregar Pelicula</h1></br></br>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" >Añadir Pelicula</button>
-        </form></br></br>
+        <h1>Pelicula Cargada Correctamente.!!!</h1>
+        </br></br>
+        <a href="{% url 'peliculas' %}"><button> Listado de Peliculas</button></a> </br>
+        <a href="{% url 'nueva_pelicula' %}"><button>Cargar Otra Pelicula</button></a></br>
         <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
     </div>
 

@@ -15,8 +15,10 @@
 </head>
 
 <body>
-    <div class="tabla">
+    <div class="tabla">   
         <h1>Listado de Peliculas</h1></br></br>
+        <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>     
+    </br></br>
         <table class="table">
             <thead>
                 <tr>
@@ -59,8 +61,8 @@
             <li>0 = No</li>
             <li>1 = Si</li>
         </ul>
-        </br></br>
-        <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
+        
+        
     </div>
 
 </body>

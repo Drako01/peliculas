@@ -10,7 +10,6 @@ from . import forms
 # Create your views here.
 
 def index(request):
-
     return render(request, "titulos/index.html")
 
 
@@ -42,6 +41,7 @@ def peliculas(request, template_name="titulos/peliculas.html"):
     conn.close()
     dato = {"peliculas": pelicula_list}
     return render(request, template_name, dato)
+
 
 def carga_pelicula(request, template_name="titulos/carga_pelicula.html"):
     return render(request, template_name)

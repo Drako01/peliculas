@@ -1,7 +1,6 @@
 from django import forms
 
-class FormularioPeliculas(forms.Form):
-    #id = forms.IntegerField()
+class FormularioPeliculas(forms.Form):    
     nombre = forms.CharField(label="Nombre", max_length=128)
     GENERO = (
         (1, "Accion"),

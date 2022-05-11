@@ -5,7 +5,7 @@ import sqlite3
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from . import forms
-
+from . models import Localidad
 
 # Create your views here.
 
@@ -45,3 +45,8 @@ def peliculas(request, template_name="titulos/peliculas.html"):
 
 def carga_pelicula(request, template_name="titulos/carga_pelicula.html"):
     return render(request, template_name)
+
+def localidades(request, template_name="titulos/localidades.html"):
+    lista_localidades = Localidad.objects.all()
+    dato = {"localidades": lista_localidades}
+    return render(request, template_name, dato)

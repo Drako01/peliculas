@@ -16,23 +16,14 @@
 
 <body>
     <div class="tabla">
-        <h3>Lista de Localidades</h3></br></br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>CP</th>
-                    <th>Provincia</th>
-                </tr>
-            </thead>
-            {% for localidad in localidades %}
-            <tr>
-                <td> {{localidad.nombre}} </td>
-                <td> {{localidad.cp}} </td>
-                <td> {{localidad.provincia}} </td>
-            </tr>
-            {% endfor %}
-        </table></br></br>
+        <h3>Datos de la Localidad {{ localidad.nombre }} </h3></br></br>
+        <div>
+            Cód Postal: {{ localidad.cp }}
+        </div>
+        <div>
+            Provincia: {{ localidad.provincia }}
+        </div>
+        </br></br>
         <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
     </div>
 

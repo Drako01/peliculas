@@ -11,6 +11,10 @@
     font-weight: 400;
 }
 
+.pytho_log img{
+    width: 600px;
+}
+
 .tabla h1{
     color: rgb(175, 9, 9);    
 }
@@ -28,7 +32,7 @@ button{
     height: 40px;
     width: 150px;
     border-radius: 10px;
-    border-bottom: none;
+    border: none;
 }
 
 .carga_p form{

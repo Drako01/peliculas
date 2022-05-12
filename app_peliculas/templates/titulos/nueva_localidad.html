@@ -6,35 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localidades</title>
+    <title>Cargar Peliculas</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
     <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="tabla">
-        <h3>Lista de Localidades</h3></br></br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>CP</th>
-                    <th>Provincia</th>
-                </tr>
-            </thead>
-            {% for localidad in localidades %}
-            <tr>
-                <td> {{localidad.nombre}} </td>
-                <td> {{localidad.cp}} </td>
-                <td> {{localidad.provincia}} </td>
-            </tr>
-            {% endfor %}
-        </table></br></br>
+    <div class="carga_p">
+        <h1>Agregar Localidad</h1></br></br>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" >Añadir Localidad</button>
+        </form></br></br>
         <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
     </div>
+
 
 </body>
 

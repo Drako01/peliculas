@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 import requests
 from . import forms
-from .forms import LocalidadForm, FormularioPersona
+from .forms import *
 from . models import Localidad, Persona
 from titulos import models
 

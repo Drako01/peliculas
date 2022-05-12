@@ -20,6 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>CP</th>
                     <th>Provincia</th>
@@ -27,6 +28,7 @@
             </thead>
             {% for localidad in localidades %}
             <tr>
+                <td> {{localidad.id}} </td>
                 <td> {{localidad.nombre}} </td>
                 <td> {{localidad.cp}} </td>
                 <td> {{localidad.provincia}} </td>

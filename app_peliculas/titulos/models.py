@@ -14,7 +14,7 @@ class Localidad(models.Model):
     provincia = models.CharField("Provincia: ", max_length=50)
     
     class Meta:
-        ordering = ["nombre"]
+        ordering = ["pk"]
     
     def __str__(self):
         return "%s - CP: %s" % (self.nombre, self.cp)

@@ -18,7 +18,7 @@ def index(request, template_name="titulos/index.html"):
 
 def nueva_pelicula(request, template_name="titulos/nueva_pelicula.html"):
     if request.method == "POST":
-        form = forms.FormularioPeliculas(request.POST)
+        form = FormularioPeliculas(request.POST)
         if form.is_valid():
             conn = sqlite3.connect("peliculas.db")
             cursor = conn.cursor()
@@ -31,7 +31,7 @@ def nueva_pelicula(request, template_name="titulos/nueva_pelicula.html"):
             conn.close()
             return HttpResponseRedirect(reverse("carga_pelicula"))            
     else:
-        form = forms.FormularioPeliculas()
+        form = FormularioPeliculas()
     ctx = {"form": form}
     return render(request, template_name, ctx)
 

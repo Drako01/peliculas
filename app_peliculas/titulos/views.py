@@ -12,8 +12,8 @@ from titulos import models
 
 # Create your views here.
 
-def index(request):
-    return render(request, "titulos/index.html")
+def index(request, template_name="titulos/index.html"):
+    return render(request, template_name)
 
 
 def nueva_pelicula(request, template_name="titulos/nueva_pelicula.html"):

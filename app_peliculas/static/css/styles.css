@@ -37,15 +37,22 @@ img{
 }
 
 button{
-    background-color: rgb(211, 245, 45);
+    background-color: rgb(199, 230, 24);
+    border-bottom: 1px solid #000;
     height: 40px;
     width: 150px;
     border-radius: 10px;
     border: none;
+    box-shadow: 3px 3px 8px #000;
 }
 
 button:hover {
     background-color: chocolate;
+    box-shadow: none;
+}
+
+form{
+    background-color: rgb(145, 232, 222);
 }
 
 .carga_p form{
@@ -53,3 +60,6 @@ button:hover {
     border: 1px solid;    
 }
 
+form{
+    background-color: rgb(187, 231, 239);
+}

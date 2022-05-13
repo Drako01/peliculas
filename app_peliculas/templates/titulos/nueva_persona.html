@@ -21,7 +21,7 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" >Añadir Persona</button>
+        </br><button type="submit" >Añadir Persona</button>
         </form></br></br>
         <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
     </div>

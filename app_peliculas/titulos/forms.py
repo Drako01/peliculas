@@ -1,4 +1,5 @@
 from django import forms
+from .models import LISTA_PROV, TIPO_IVA_CHOICE
 
 class FormularioPeliculas(forms.Form):    
     nombre = forms.CharField(label="Nombre", max_length=128)
@@ -24,34 +25,7 @@ class FormularioPeliculas(forms.Form):
     
 class LocalidadForm(forms.Form):
     nombre = forms.CharField(label="Nombre", max_length=120)
-    cp = forms.CharField(label="Código Postal", max_length=8)
-    
-    LISTA_PROV = (
-        ("Buenos Aires","Buenos Aires"),
-        ("Santa Fe","Santa Fe"),
-        ("Códoba","Códoba"),
-        ("CABA","CABA"),
-        ("Catamarca","Catamarca"),
-        ("Chaco","Chaco"),
-        ("Chubut","Chubut"),
-        ("Corrientes","Corrientes"),
-        ("Entre Ríos","Entre Ríos"),
-        ("Formosa","Formosa"),
-        ("Jujuy","Jujuy"),
-        ("La Pampa","La Pampa"),
-        ("La Rioja","La Rioja"),
-        ("Mendoza","Mendoza"),
-        ("Misiones","Misiones"),
-        ("Neuquén","Neuquén"),
-        ("Río Negro","Río Negro"),
-        ("Salta","Salta"),
-        ("San Juan","San Juan"),
-        ("San Luis","San Luis"),
-        ("Santa Cruz","Santa Cruz"),
-        ("Santiago del Estero","Santiago del Estero"),
-        ("Tierra del Fuego","Tierra del Fuego"),
-        ("Tucumán","Tucumán"),    
-    )
+    cp = forms.CharField(label="Código Postal", max_length=8)    
     provincia = forms.ChoiceField(label="Provincia", choices=LISTA_PROV)
 
 class FormularioPersona(forms.Form):
@@ -63,11 +37,6 @@ class FormularioPersona(forms.Form):
     fecha_nacimiento = forms.DateField(
         label="Fecha de Nacimiento",
         widget=forms.DateInput(attrs={"type": "date"})
-    )
-    TIPO_IVA_CHOICE = (
-    ("CF", 'Consumidor Final'),
-    ("RI", 'Responsable Inscripto'),
-    ("MT", 'Monotributo')
-    )
+    )    
     tipo_iva = forms.ChoiceField(label="Tipo de IVA", choices=TIPO_IVA_CHOICE)
     

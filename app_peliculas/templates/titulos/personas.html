@@ -16,7 +16,8 @@
 
 <body>
     <div class="tabla">
-        <h3>Lista de Personas (con ORM de Django)</h3></br></br>
+        <h3>Lista de Personas (con ORM de Django)</h3></br></br></br>
+        <a href="{% url 'index' %}"><button>Volver a Inicio</button></a></br></br>
         <table class="table">
             <thead>
                 <tr>
@@ -40,8 +41,7 @@
                 <td> {{persona.tipo_iva}} </td>
             </tr>
             {% endfor %}
-        </table></br></br>
-        <a href="{% url 'index' %}"><button>Volver a Inicio</button></a>
+        </table></br>
     </div>
 
 </body>

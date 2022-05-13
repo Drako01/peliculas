@@ -11,6 +11,11 @@
     font-weight: 400;
 }
 
+.botones h1{
+    color: darkcyan;
+    text-shadow: 2px 2px #000;
+}
+
 img{
     width: 600px;
 }

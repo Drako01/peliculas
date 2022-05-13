@@ -8,11 +8,37 @@ TIPO_IVA_CHOICE = (
     ("MT", 'Monotributo')
 )
 
+LISTA_PROV = (
+    ("Buenos Aires","Buenos Aires"),
+    ("Santa Fe","Santa Fe"),
+    ("Códoba","Códoba"),
+    ("CABA","CABA"),
+    ("Catamarca","Catamarca"),
+    ("Chaco","Chaco"),
+    ("Chubut","Chubut"),
+    ("Corrientes","Corrientes"),
+    ("Entre Ríos","Entre Ríos"),
+    ("Formosa","Formosa"),
+    ("Jujuy","Jujuy"),
+    ("La Pampa","La Pampa"),
+    ("La Rioja","La Rioja"),
+    ("Mendoza","Mendoza"),
+    ("Misiones","Misiones"),
+    ("Neuquén","Neuquén"),
+    ("Río Negro","Río Negro"),
+    ("Salta","Salta"),
+    ("San Juan","San Juan"),
+    ("San Luis","San Luis"),
+    ("Santa Cruz","Santa Cruz"),
+    ("Santiago del Estero","Santiago del Estero"),
+    ("Tierra del Fuego","Tierra del Fuego"),
+    ("Tucumán","Tucumán"),    
+)
+
 class Localidad(models.Model):
     nombre = models.CharField("Nombre de la Localidad: ", max_length=50)
     cp = models.CharField("Código Postal: ", max_length=10)
-    provincia = models.CharField("Provincia: ", max_length=50)
-    
+    provincia = models.CharField("Provincia: ", max_length=50, choices=LISTA_PROV)    
     class Meta:
         ordering = ["pk"]
     

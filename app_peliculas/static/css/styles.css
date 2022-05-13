@@ -13,7 +13,7 @@
 
 .botones h1{
     color: darkcyan;
-    text-shadow: 2px 2px #000;
+    text-shadow: 2px 2px 2px #000;
 }
 
 img{
@@ -28,8 +28,12 @@ img{
     border: 1px solid;
 }
 
-.tabla thead{
+.tabla thead tr{
     background-color: bisque;
+}
+
+.tabla tr{
+    background-color: rgb(236, 252, 255);
 }
 
 button{
@@ -38,6 +42,10 @@ button{
     width: 150px;
     border-radius: 10px;
     border: none;
+}
+
+button:hover {
+    background-color: chocolate;
 }
 
 .carga_p form{

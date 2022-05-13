@@ -4,14 +4,14 @@ from .models import LISTA_PROV, TIPO_IVA_CHOICE
 class FormularioPeliculas(forms.Form):    
     nombre = forms.CharField(label="Nombre", max_length=128)
     GENERO = (
-        ("ACC", "Accion"),
-        ("DRA", "Drama"),
-        ("ROM", "Romantica"),
-        ("INF", "Infantil")
+        ("Accion", "Accion"),
+        ("Drama", "Drama"),
+        ("Romantica", "Romantica"),
+        ("Infantil", "Infantil")
     )
     genero = forms.ChoiceField(label="Género", choices=GENERO)
     fecha = forms.DateField(
-        label="Fecha de inicio",
+        label="Fecha de Filmación",
         widget=forms.DateInput(attrs={"type": "date"})
     )
     cantidad = forms.IntegerField(label="Cantidad de Ejemplares: ")

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo_pagina %}Sistema Administrador de Personas{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+        <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+</head>
+
+<body>        
+    <div class="botones">
+        <h1> {% block titulo_principal %}Aplicación de Django & Python{% endblock %} </h1></br></br>
+        <a href="{% url 'peliculas' %}"><button> Listado de Peliculas</button></a> </br>
+        <a href="{% url 'nueva_pelicula' %}"><button>Cargar Pelicula</button></a> </br>
+        <a href="{% url 'personas' %}"><button> Listado de Personas</button></a> </br>
+        <a href="{% url 'nueva_persona' %}"><button>Cargar Persona</button></a></br>
+        <a href="{% url 'localidades' %}"><button>Ver Localidades</button></a></br>
+        <a href="{% url 'nueva_localidad' %}"><button>Cargar Localidad</button></a></br></br>
+        <img class="pytho_log" src=" {% static 'img/django.png' %} " alt="ArmoTuSitio" >
+    </div>    
+</body>
+
+</html>

@@ -1,5 +1,7 @@
+from dataclasses import field
 from django import forms
-from .models import LISTA_PROV, TIPO_IVA_CHOICE
+from django.forms import ModelForm
+from .models import Persona, Localidad
 
 class FormularioPeliculas(forms.Form):    
     nombre = forms.CharField(label="Nombre", max_length=128)
@@ -23,20 +25,12 @@ class FormularioPeliculas(forms.Form):
     edades = forms.ChoiceField(label="Audiencia: ", choices=EDADES)
     preventa = forms.BooleanField(label="¿Preventa OnLine?", required=False)
     
-class LocalidadForm(forms.Form):
-    nombre = forms.CharField(label="Nombre", max_length=120)
-    cp = forms.CharField(label="Código Postal", max_length=8)    
-    provincia = forms.ChoiceField(label="Provincia", choices=LISTA_PROV)
+class LocalidadForm(ModelForm):
+    class Meta:
+        model = Localidad
+        fields = '__all__'
 
-class FormularioPersona(forms.Form):
-    nombre = forms.CharField(label="Nombre", max_length=128)
-    apellido = forms.CharField(label="Apellido",max_length=150)
-    edad = forms.IntegerField(label="Edad")
-    email = forms.EmailField(label="E-Mail",max_length=150)
-    activo = forms.BooleanField(label="Es Activo?",required=False)
-    fecha_nacimiento = forms.DateField(
-        label="Fecha de Nacimiento",
-        widget=forms.DateInput(attrs={"type": "date"})
-    )    
-    tipo_iva = forms.ChoiceField(label="Tipo de IVA", choices=TIPO_IVA_CHOICE)
-    
+class FormularioPersona(ModelForm):
+    class Meta:
+        model = Persona
+        fields = '__all__'

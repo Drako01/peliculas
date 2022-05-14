@@ -63,11 +63,7 @@ def nueva_localidad(request, template_name="titulos/nueva_localidad.html"):
     if request.method == "POST":
         form = LocalidadForm(request.POST)
         if form.is_valid():
-            Localidad.objects.create(
-                nombre=form.cleaned_data["nombre"],
-                cp=form.cleaned_data["cp"],
-                provincia=form.cleaned_data["provincia"]
-            )
+            form.save(commit=True)
             return redirect('localidades')
     else:
         form = LocalidadForm()
@@ -85,15 +81,7 @@ def nueva_persona(request, template_name="titulos/nueva_persona.html"):
     if request.method == "POST":
         form = FormularioPersona(request.POST)
         if form.is_valid():
-            Persona.objects.create(
-                nombre=form.cleaned_data["nombre"],
-                apellido=form.cleaned_data["apellido"],
-                edad=form.cleaned_data["edad"],
-                email=form.cleaned_data["email"],
-                activo=form.cleaned_data["activo"],
-                fecha_nacimiento=form.cleaned_data["fecha_nacimiento"],
-                tipo_iva=form.cleaned_data["tipo_iva"]
-            )
+            form.save(commit=True)
             return redirect('personas')
     else:
         form = FormularioPersona()

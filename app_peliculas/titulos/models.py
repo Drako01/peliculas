@@ -49,10 +49,10 @@ class Persona(models.Model):
     nombre = models.CharField("Nombre/s", max_length=150)
     apellido = models.CharField(max_length=150)
     edad = models.IntegerField(null=True, blank=True)
-    localidad = models.ForeignKey(Localidad, on_delete=models.PROTECT, null=True, blank=True)
+    localidad = models.ForeignKey(Localidad, on_delete=models.PROTECT)
     email = models.EmailField(null=True, blank=True)
-    activo = models.BooleanField(default=False)
-    fecha_nacimiento = models.DateTimeField("Fecha de Nacimiento", null=True, blank=True)
+    activo = models.BooleanField(default=True)
+    fecha_nacimiento = models.DateTimeField("Fecha de Nacimiento - (dd/mm/aaaa)")
     tipo_iva = models.CharField("Tipo de IVA", max_length=2, choices=TIPO_IVA_CHOICE, default="CF")
     
     class Meta:

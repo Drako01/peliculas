@@ -1,10 +1,7 @@
-from certifi import contents
-from django.http import HttpResponse, Http404
 from django.shortcuts import redirect, render
 import sqlite3
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-import requests
 from . import forms
 from .forms import *
 from . models import Localidad, Persona

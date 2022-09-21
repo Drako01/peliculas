@@ -1,0 +1,5 @@
+Django==3.2
+autopep8
+pycodestyle
+toml
+requests
